@@ -40,22 +40,27 @@ textarea {
 }
   
 .past {
-    background-color: #d3d3d3;
+    background-color: rgb(255, 126, 206);
     color: white;
 }
   
 .present {
-    background-color: #ff6961;
+    background-color: yellowgreen;
     color: white;
 }
   
 .future {
-    background-color: #77dd77;
+    background-color: #06AED5;
     color: white;
 }
+ul.event-group {
+    min-height: 75px;
+    margin: 0;
+    list-style-type: none;
+}
   
-.saveBtn {
-    border-left: 1px solid black;
+/*.saveBtn {
+    border-left: 1px solid rgb(185, 106, 199);
     border-top-right-radius: 15px;
     border-bottom-right-radius: 15px;
     background-color: #06AED5;
@@ -66,4 +71,41 @@ textarea {
     font-size: 20px;
     transition: all .3s ease-in-out;
 }
-  
+*/
+.save-delete {
+    border-left: 1px solid black;
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+    background-color: rgb(57, 27, 105);
+    color: white;
+    text-align: center;
+    padding-top: 25px;
+  }
+.save-delete i.fa-save{
+    font-size: 30px;
+  }
+.save-delete i.fa-save:hover {
+    font-size: 25px;
+    color:lightgreen;
+    transition: all .3s ease-in-out;
+  }
+  .save-delete i.fa-trash{
+    font-size: 25px;
+    padding-left: 8px;
+    color: silver;
+  }
+.save-delete i.fa-trash:hover {
+    font-size: 18px;
+    color: rgb(253, 112, 112);
+    transition: all .5s ease-in-out;
+  }
+.event-group{
+    padding: 2px 0 0 2px;
+  }
+.events{
+    margin: 0;
+    height: 75px;
+    color: #000000;
+    font-size: 14px;
+    line-height: 22px;
+  }
