@@ -2,18 +2,18 @@
 var currentDay = moment().format("dddd, MMMM Do");
 
 //Set each timeblock in the daily schedule using moment.js
-var hour9 = moment().hour(6);
-var hour9 = moment().hour(7);
-var hour9 = moment().hour(8);
+var hour6 = moment().hour(6);
+var hour7 = moment().hour(7);
+var hour8 = moment().hour(8);
 var hour9 = moment().hour(9);
-var hour9 = moment().hour(10);
-var hour9 = moment().hour(11);
-var hour9 = moment().hour(12);
-var hour9 = moment().hour(13);
-var hour9 = moment().hour(14);
-var hour9 = moment().hour(15);
-var hour9 = moment().hour(16);
-var hour9 = moment().hour(17);
+var hour10 = moment().hour(10);
+var hour11 = moment().hour(11);
+var hour12 = moment().hour(12);
+var hour13 = moment().hour(13);
+var hour14 = moment().hour(14);
+var hour15 = moment().hour(15);
+var hour16 = moment().hour(16);
+var hour17 = moment().hour(17);
 
 
 //Create an array of hour blocks for code generation
@@ -42,3 +42,13 @@ $.each(hours, function (index, value) {
     "<div class='col-2 save-delete' id='save-delete" + (index + 9) + "'><i class='fas fa-save' title='Save Event'></i> <i class='fas fa-trash' title='Remove Event'></i></div></div></div>");
 });
 
+// Display current day at top of planner
+$("#currentDay").text(currentDay);
+
+//Audit each time block to display current, past and future timeblocks
+
+var auditTime = function () {
+    currentTime = moment().format("hh:mm:ss");
+
+}
+auditTime();
