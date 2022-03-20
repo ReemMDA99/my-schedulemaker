@@ -1,4 +1,4 @@
-# My Work Scheduler
+# MY SCHEDULEMAKER
 Weekly challenge 5
 
 # Challenge:
