@@ -45,6 +45,7 @@ textarea {
     padding-top: 15px;
     font-size: 25px;
     font-style: bold;
+    border-radius: 15px;
 }
   
 .past {
