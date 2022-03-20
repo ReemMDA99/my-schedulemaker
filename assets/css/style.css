@@ -1,11 +1,13 @@
 body {
     font-family: 'Open Sans', sans-serif;
-    font-size: 16 px;
+    font-size: 20px;
     line-height: 1;
+    background-color: rgb(241, 253, 253);
 }
 textarea {
     background :transparent;
-    border: none;
+    font-family:'Times New Roman', Times, serif;
+    border: 1px dotted blue;
     resize: none;
     color: #000000;
     border-left: 1px solid black;
@@ -27,20 +29,26 @@ textarea {
     border-radius: 15px;
 
 }
+.lead {
+    font-size: 1.25rem;
+    font-weight: 300;
+}
 .row {
     white-space: pre-wrap;
     height: 80px;
     border-top: 1px solid white;
 }
 .hour {
-    background-color: #ffffff;
+    background-color:rgb(166, 207, 205);
     color: #000000;
-    border-top: 1px dashed #000000;
+    border-top: 2px dashed #000000;
     padding-top: 15px;
+    font-size: 25px;
+    font-style: bold;
 }
   
 .past {
-    background-color: rgb(255, 126, 206);
+    background-color: rgb(255, 198, 233);
     color: white;
 }
   
@@ -50,7 +58,7 @@ textarea {
 }
   
 .future {
-    background-color: #06AED5;
+    background-color: hsl(192, 61%, 75%);
     color: white;
 }
 ul.event-group {
@@ -59,19 +67,6 @@ ul.event-group {
     list-style-type: none;
 }
   
-/*.saveBtn {
-    border-left: 1px solid rgb(185, 106, 199);
-    border-top-right-radius: 15px;
-    border-bottom-right-radius: 15px;
-    background-color: #06AED5;
-    color: white;
-}
-  
-.saveBtn i:hover {
-    font-size: 20px;
-    transition: all .3s ease-in-out;
-}
-*/
 .save-delete {
     border-left: 1px solid black;
     border-top-right-radius: 15px;
@@ -85,7 +80,7 @@ ul.event-group {
     font-size: 30px;
   }
 .save-delete i.fa-save:hover {
-    font-size: 25px;
+    font-size: 35px;
     color:lightgreen;
     transition: all .3s ease-in-out;
   }
@@ -95,7 +90,7 @@ ul.event-group {
     color: silver;
   }
 .save-delete i.fa-trash:hover {
-    font-size: 18px;
+    font-size: 30px;
     color: rgb(253, 112, 112);
     transition: all .5s ease-in-out;
   }
@@ -106,6 +101,7 @@ ul.event-group {
     margin: 0;
     height: 75px;
     color: #000000;
-    font-size: 14px;
+    font-size: 25px;
     line-height: 22px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
   }
