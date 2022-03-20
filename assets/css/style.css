@@ -85,7 +85,7 @@ ul.event-group {
     color:lightgreen;
     transition: all .3s ease-in-out;
   }
-  .save-delete i.fa-trash{
+.save-delete i.fa-trash{
     font-size: 25px;
     padding-left: 8px;
     color: silver;
@@ -95,6 +95,7 @@ ul.event-group {
     color: rgb(253, 112, 112);
     transition: all .5s ease-in-out;
   }
+  
 .event-group{
     padding: 2px 0 0 2px;
   }

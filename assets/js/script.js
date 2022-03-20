@@ -143,10 +143,10 @@ else {
     $("#timeblock15").addClass("future");
 }
 // Audit hour 16 and set color
-if (moment().isBetween(hour16, hour17)) {
+if (moment().isBetween(hour16)) {
     $("#timeblock16").addClass("present");
 }
-else if (moment().isAfter(hour17)) {
+else if (moment().isAfter(hour16)) {
     $("#timeblock16").addClass("past");
 }
 else {
