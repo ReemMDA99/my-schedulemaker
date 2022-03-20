@@ -33,6 +33,7 @@ WHEN I refresh the page
 THEN the saved events persist
 
 # Screenshot
+![Picture2](https://user-images.githubusercontent.com/94458512/159155632-2e58353f-64e0-4629-9654-17192fcd4b68.png)
 
 
 # Links:
