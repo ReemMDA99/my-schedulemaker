@@ -1,6 +1,20 @@
 # My Work Scheduler
 Weekly challenge 5
+
+# Challenge:
+To create a simple calendar application that allows a user to save events for each hour of the day. This app will run in the browser and feature dynamically updated HTML and CSS powered by jQuery.
+
+# Languages used:
+- Moment.js
+- HTML
+- CSS
+- JavaScript
+- jQuery
+- Bootstrap
+- jQuery UI
+
 # Criteria:
+
 AS AN employee with a busy schedule
 I WANT to add important events to a daily planner
 SO THAT I can manage my time effectively
@@ -17,3 +31,13 @@ WHEN I click the save button for that time block
 THEN the text for that event is saved in local storage
 WHEN I refresh the page
 THEN the saved events persist
+
+# Screenshot
+
+
+# Links:
+GitHub Repo URL: 
+Deployed URL: 
+
+# Contribution:
+Reem Mohammed Ahmed
