@@ -44,7 +44,7 @@ Deployed URL:  https://reemmda99.github.io/my-schedulemaker/
 # License
 MIT License
 
-Copyright (c) 2022 Reem Mohammed Ahmed
+
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -66,4 +66,4 @@ SOFTWARE.
 
 
 # Contribution:
-Reem Mohammed Ahmed
+Copyright (c) 2022 Reem Mohammed Ahmed

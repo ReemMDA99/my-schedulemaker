@@ -12,15 +12,13 @@ var hour13 = moment().hour(13);
 var hour14 = moment().hour(14);
 var hour15 = moment().hour(15);
 var hour16 = moment().hour(16);
-
-
-
+var hour17 = moment().hour(17);
+var hour18 = moment().hour(18);
 
 //Create an array of hour blocks for code generation
-var hours = [hour8, hour9, hour10, hour11, hour12, hour13, hour14, hour15, hour16];
+var hours = [hour8, hour9, hour10, hour11, hour12, hour13, hour14, hour15, hour16, hour17];
 
 //Get local storage data or set to empty
-
 var events8 = JSON.parse(localStorage.getItem('hour8')) || "";
 var events9 = JSON.parse(localStorage.getItem('hour9')) || "";
 var events10 = JSON.parse(localStorage.getItem('hour10')) || "";
@@ -30,18 +28,15 @@ var events13 = JSON.parse(localStorage.getItem('hour13')) || "";
 var events14 = JSON.parse(localStorage.getItem('hour14')) || "";
 var events15 = JSON.parse(localStorage.getItem('hour15')) || "";
 var events16 = JSON.parse(localStorage.getItem('hour16')) || "";
-
-
-
+var events17 = JSON.parse(localStorage.getItem('hour17')) || "";
 
 //Generate all timeblocks and insert saved local storage data
-
 $.each(hours, function (index, value) {
-    events = [events8, events9, events10, events11, events12, events13, events14, events15, events16]
-    $(".container").append("<div class= 'row'><div class = 'col-2 hour text-right' id= 'hour" +
+events = [events8, events9, events10, events11, events12, events13, events14, events15, events16, events17]
+$(".container").append("<div class= 'row'><div class = 'col-2 hour text-right' id= 'hour" +
     (index + 8) + "'><span>" + value.format("h A") + "</span></div><div class='col-8 event-group' id='timeblock" +
     (index + 8) + "'><textarea class='events col-12' id='eventblock" + (index + 8) + "'>" + events[index] + "</textarea></div>" +
-    "<div class='col-2 save-delete' id='save-delete" + (index + 8) + "'><i class='fas fa-save' title='Save Event'></i> <i class='fas fa-trash alt' title='Remove Event'></i></div></div></div>");
+    "<div class='col-2 save-delete' id='save-delete" + (index + 8) + "'><i class='fas fa-save' title='Save Event'></i><i class='fas fa-trash alt' title='Remove Event'></i></div></div></div>");
 });
 
 // Display current day at top of planner
@@ -50,7 +45,7 @@ $("#currentDay").text(currentDay);
 //Audit each time block to display current, past and future timeblocks
 
 var auditTime = function () {
-    currentTime = moment().format("hh:mm:ss");
+currentTime = moment().format("hh:mm:ss");
 // $("#currentDay").text(currentTime);
 
 
@@ -143,15 +138,26 @@ else {
     $("#timeblock15").addClass("future");
 }
 // Audit hour 16 and set color
-if (moment().isBetween(hour16)) {
+if (moment().isBetween(hour16, hour17)) {
     $("#timeblock16").addClass("present");
 }
-else if (moment().isAfter(hour16)) {
+else if (moment().isAfter(hour17)) {
     $("#timeblock16").addClass("past");
 }
 else {
     $("#timeblock16").addClass("future");
 }
+
+// Audit hour 17 and set color
+if (moment().isBetween(hour17, hour18)) {
+    $("#timeblock17").addClass("present");
+}
+else if (moment().isAfter(hour18)) {
+    $("#timeblock17").addClass("past");
+}
+else {
+    $("#timeblock17").addClass("future");
+};
 
 //Audit time block Ends
 
@@ -193,12 +199,19 @@ $("#save-delete16").on("click" , "i.fa-trash", function () {
     localStorage.removeItem("hour16");
     $("#eventblock16").val("");
 })
+$("#save-delete17").on("click", "i.fa-trash", function () {
+    localStorage.removeItem("hour17");
+    $("#eventblock17").val("");
+})
 
 //End of delete event functions
 
-
 //Add save event function for each time block
 
+$("#save-delete8").on("click", "i.fa-save", function () {
+    var event8 = $("#eventblock8").val().trim();
+    localStorage.setItem('hour8', JSON.stringify(event8));
+})
 $("#save-delete9").on("click", "i.fa-save", function () {
     var event9 = $("#eventblock9").val().trim();
     localStorage.setItem('hour9', JSON.stringify(event9));
@@ -231,15 +244,20 @@ $("#save-delete16").on("click", "i.fa-save", function () {
     var event16 = $("#eventblock16").val().trim();
     localStorage.setItem('hour16', JSON.stringify(event16));
 })
-
+$("#save-delete17").on("click", "i.fa-save", function () {
+    var event17 = $("#eventblock17").val().trim();
+    localStorage.setItem('hour17', JSON.stringify(event17));
+})
 // End save event functions
 
-//This function runs but the time is never refreshed?
+// This function runs but the time is never refreshed?
+
 setInterval(function () {
-    $(".event-group .events").each(function (index, el) {
-        auditTime(el);
-        //console.log(currentTime);
-    }); // 1000ms x 60 = 1 minute x 30 = 30 minutes
-}, (1000 * 60) * 30);
+$(".event-group .events").each(function (index, el) {
+    auditTime(el);
+    //console.log(currentTime);
+});
+}, (1000 * 60) *30); // 1000ms x 60 = 1 minute x 30 = 30 minutes
 }
+
 auditTime();
