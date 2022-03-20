@@ -33,8 +33,8 @@ WHEN I refresh the page
 THEN the saved events persist
 
 # Screenshot
-![Picture2](https://user-images.githubusercontent.com/94458512/159155632-2e58353f-64e0-4629-9654-17192fcd4b68.png)
 
+![Picture2](https://user-images.githubusercontent.com/94458512/159156240-78adfca2-eaf9-49c7-9121-2c7000692083.png)
 
 # Links:
 GitHub Repo URL: https://github.com/ReemMDA99/my-schedulemaker
