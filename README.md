@@ -38,6 +38,7 @@ THEN the saved events persist
 
 # Links:
 GitHub Repo URL: https://github.com/ReemMDA99/my-schedulemaker
+
 Deployed URL:  https://reemmda99.github.io/my-schedulemaker/
 
 # License
